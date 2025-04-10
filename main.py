@@ -71,12 +71,17 @@ namelist = {
     },
 }
 
-print("Categories available: Modern, Fantasy, Mideaval, Mythology, Uruk, Goth, Alien, Sci-Fi, Steampunk, Cyberpunk")
+print("Categories available: Modern, Fantasy, Medieval, Mythology, Uruk, Goth, Alien, Sci-Fi, Steampunk, Cyberpunk")
+print("Genders available: Male, Female, Non Binary")
 last_name = input("Last name: ")
 category = input("Type of Category, pretty person: ")
 gender = input("Input Gender: ")
-amount = input("Amount of names you want generated: ")
+amount = int(input("Amount of names you want generated: "))
 if category not in namelist:
     print("Pick another category, please!")
 if gender not in namelist[category]:
     print("Pick another gender from the provided list (Male, Female, Non Binary).")
+print("\n Generated Names: ")
+for num in range(amount):
+    namelist = random.choice(namelist[category][gender])
+    print(f"{namelist} {last_name}")
