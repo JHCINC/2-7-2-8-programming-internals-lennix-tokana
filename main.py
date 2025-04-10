@@ -21,7 +21,7 @@ namelist = {
         "Female": ["Emma", "Olivia", "Ava", "Sophia", "Isabella", "Mia", "Amelia", "Harper", "Evelyn", "Abigail", "Ella", "Chloe", "Lily", "Charlotte", "Grace"],
         "Non Binary": ["Alex", "Jordan", "Taylor", "Morgan", "Riley", "Avery", "Casey", "Rowan", "Skyler", "Quinn", "Emerson", "Sage", "Cameron", "Finley", "Dakota"],
         "Helicopter": ["Apache", "Black Hawk", "Chinook", "Huey", "Sea Hawk", "Viper", "Osprey", "Merlin", "Gazelle", "Kiowa"],
-        "Femboy": ["Lennix", "Micheal", "Ethan", "Louis", "Lachlan", "Gage"],
+        "Femboy": ["Lennix", "Micheal", "Ethan", "Louis", "Lachlan", "Gage", "Rohan"],
     },
 
     "Fantasy": {
@@ -40,7 +40,7 @@ namelist = {
         "Non Binary": ["Hesper", "Aether", "Solstice", "Equinox", "Ambrosia", "Ember", "Tempest", "Chroma", "Labyrinth", "Oracle", "Echo", "Flux", "Horizon", "Nebula", "Cinder"],
     },
     "Uruk": {
-        "Male": ["Gnash", "Borg", "Dush", "Kruk", "Azog", "Lugdash", "Rak", "Gromm", "Skak", "Thrak", "Ur-Hakon", "Brûz", "Zog", "Lorm", "Flog"],
+        "Male": ["Gnash", "Pushkrimp", "Dush", "Kruk", "Azog", "Lugdash", "Rak", "Gromm", "Skak", "Thrak", "Ur-Hakon", "Brûz", "Zog", "Lorm", "Flog"],
         "Female": ["Gnashra", "Borga", "Dusha", "Kruka", "Azoga", "Lugdasha", "Raka", "Gromma", "Skaka", "Thraka", "Ur-Hakona", "Brûza", "Zoga", "Gorgora", "Floga"],
         "Non Binary": ["Bagga", "Vort", "Glim", "Thraz", "Jex", "Rulk", "Pyn", "Zolt", "Darg", "Quiv", "Hyr", "Brev", "Kyn", "Vex", "Jorn"],
     },
@@ -70,3 +70,13 @@ namelist = {
         "Non Binary": ["Ash", "Cyan", "Devon", "Ember", "Finch", "Kai", "Lennox", "Mercury", "Neon", "Pixel", "Quinn", "Rowan", "FemboyUwU", "Vale", "Alduin"],
     },
 }
+
+print("Categories available: Modern, Fantasy, Mideaval, Mythology, Uruk, Goth, Alien, Sci-Fi, Steampunk, Cyberpunk")
+last_name = input("Last name: ")
+category = input("Type of Category, pretty person: ")
+gender = input("Input Gender: ")
+amount = input("Amount of names you want generated: ")
+if category not in namelist:
+    print("Pick another category, please!")
+if gender not in namelist[category]:
+    print("Pick another gender from the provided list (Male, Female, Non Binary).")
